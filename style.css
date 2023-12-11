@@ -11,6 +11,8 @@
   --purp: #9792e4;
 }
 
+/* HEADER */
+
 header {
   padding: 0 var(--gutter);
   height: 80px;
@@ -38,6 +40,10 @@ nav * {
   margin: 40px -15px;
 }
 
+#jumbo {
+  height: calc(100vh - 80px);
+}
+
 #jumbo .col {
   width: calc(100% / 3);
   height: 350px;
@@ -53,4 +59,30 @@ nav * {
   height: 100%;
   border-radius: 20px;
   padding: 25px;
+}
+
+/* PLANNING SECTION */
+
+#planning {
+  background-color: var(--purp);
+  height: 100vh;
+  padding: 80px var(--gutter);
+}
+
+#planning .container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+#planning .img {
+  width: calc(100% / 2 - 30px);
+  padding: 30px;
+}
+
+#planning .img:last-of-type {
+  background-color: white;
+  border-radius: 30px;
+  height: 400px;
+  align-self: flex-end;
 }
