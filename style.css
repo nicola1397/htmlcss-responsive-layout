@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 :root {
@@ -33,6 +33,35 @@ nav * {
   margin-left: 30px;
 }
 
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  height: 80px;
+}
+
+nav a:hover {
+  box-shadow: 0 -4px white inset;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  align-self: center;
+}
+
+nav button {
+  border-style: none;
+  background-color: white;
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+}
+
 .burger {
   display: none;
 }
@@ -45,6 +74,21 @@ nav * {
 }
 
 /* Jumbo Cards */
+
+/* FONT OPTIONS */
+
+h2 {
+  color: var(--blue);
+  margin-bottom: 30px;
+}
+
+#jumbo p {
+  color: #5a6e7f;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+/* END OF FONT OPTIONS */
 
 .container {
   padding: 0 var(--gutter);
@@ -74,6 +118,47 @@ nav * {
   height: 100%;
   border-radius: 20px;
   padding: 25px;
+}
+
+#jumbo .card {
+  text-align: center;
+}
+
+#jumbo .double {
+  text-align: left;
+  display: flex;
+  gap: 30px;
+}
+
+#jumbo img {
+  display: block;
+  height: 100%;
+  transform: translateY(25px);
+  margin: auto;
+}
+
+.double div {
+  width: 50%;
+}
+
+#jumbo button {
+  background-color: var(--blue);
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 40px;
+  border-style: none;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+#jumbo button i {
+  margin-right: 10px;
+}
+
+#jumbo .card > i {
+  color: var(--blue);
+  font-size: 5rem;
+  margin-bottom: 30px;
 }
 
 /* PLANNING SECTION */
