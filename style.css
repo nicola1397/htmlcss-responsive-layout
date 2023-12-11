@@ -33,6 +33,17 @@ nav * {
   margin-left: 30px;
 }
 
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+
 /* Jumbo Cards */
 
 .container {
@@ -184,4 +195,33 @@ nav * {
 footer {
   background-color: #333333;
   text-align: center;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 20px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+  nav::after {
+    content: "";
+  }
+
+  .container {
+    padding: 20px;
+  }
+  #benefits .col {
+    width: calc(100% / 2);
+  }
+  #benefits .container {
+    height: 100%;
+  }
 }
