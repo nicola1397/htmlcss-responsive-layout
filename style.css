@@ -133,3 +133,26 @@ nav * {
   border-radius: 20px;
   padding: 25px;
 }
+
+/* ABOUT US SECTION */
+
+#about {
+  padding: 60px 0;
+}
+
+#about .container {
+  display: flex;
+  gap: 30px;
+}
+
+#about .about-L {
+  width: 75%;
+}
+
+#about .about-R {
+  width: 25%;
+}
+
+.about-R * {
+  display: block;
+}
