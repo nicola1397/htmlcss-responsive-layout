@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --gutter: 20%;
+  --blue: #0084fd;
+  --azur: #b5ddff;
+  --purp: #9792e4;
+}
+
+header {
+  padding: 0 var(--gutter);
+  height: 80px;
+  background-color: var(--blue);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  line-height: 80px;
+}
+
+nav * {
+  margin-left: 30px;
+}
