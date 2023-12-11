@@ -199,6 +199,8 @@ footer {
 
 /* MEDIA QUERY */
 
+/* TABLET VIEW */
+
 @media screen and (max-width: 768px) {
   header {
     padding: 20px;
@@ -223,5 +225,30 @@ footer {
   }
   #benefits .container {
     height: 100%;
+  }
+}
+
+/* SMARTPHONE VIEW */
+
+@media screen and (max-width: 480px) {
+  .col {
+    width: 100% !important;
+  }
+
+  .container {
+    display: block !important;
+  }
+
+  #jumbo {
+    height: 100%;
+  }
+
+  #planning {
+    height: 100%;
+    padding: 0;
+  }
+
+  #planning .img {
+    width: 100%;
   }
 }
