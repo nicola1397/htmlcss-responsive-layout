@@ -112,6 +112,7 @@ nav * {
 
 #benefits {
   background-color: var(--purp);
+  text-align: center;
 }
 
 #benefits .container {
@@ -155,4 +156,32 @@ nav * {
 
 .about-R * {
   display: block;
+}
+
+/* GET STARTED SECTION */
+
+#started {
+  background-color: var(--purp);
+}
+
+#started .container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#started .container > * {
+  display: block;
+}
+
+#started ul > li {
+  display: inline-block;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #333333;
+  text-align: center;
 }
