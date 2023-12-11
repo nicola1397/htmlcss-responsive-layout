@@ -6,6 +6,7 @@
 
 body {
   font-family: "Hanken Grotesk", sans-serif;
+  word-wrap: break-word;
 }
 
 :root {
@@ -77,7 +78,7 @@ nav button {
 
 /* FONT OPTIONS */
 
-h2 {
+#jumbo h2 {
   color: var(--blue);
   margin-bottom: 30px;
 }
@@ -100,13 +101,14 @@ h2 {
 }
 
 #jumbo {
-  height: calc(100vh - 80px);
+  height: 100%;
 }
 
 #jumbo .col {
   width: calc(100% / 3);
-  height: 350px;
+  min-height: fit-content;
   padding: 15px;
+  flex-grow: 1 0;
 }
 
 #jumbo .col:first-of-type {
@@ -135,6 +137,7 @@ h2 {
   height: 100%;
   transform: translateY(25px);
   margin: auto;
+  max-height: 300px;
 }
 
 .double div {
@@ -163,10 +166,39 @@ h2 {
 
 /* PLANNING SECTION */
 
+/* FONT OPTIONS */
+
+#planning h2 {
+  color: white;
+  margin: 30px 0;
+  font-size: 2rem;
+}
+
+#planning h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+#planning p {
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+#planning .imgcard p {
+  color: black;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* END OF FONT OPTIONS */
+
 #planning {
   background-color: var(--purp);
-  height: 100vh;
-  padding: 60px var(--gutter);
+  height: 100%;
+  padding: 60px 30px;
 }
 
 #planning .container {
@@ -176,15 +208,40 @@ h2 {
 }
 
 #planning .img {
-  width: calc(100% / 2 - 30px);
+  width: calc(100% / 2 - 60px);
   padding: 30px;
 }
 
+#planning img {
+  width: 100%;
+  margin: 150px 0;
+}
+
 #planning .img:last-of-type {
+  align-self: flex-end;
+}
+
+#planning .imgcard {
   background-color: white;
   border-radius: 30px;
-  height: 400px;
-  align-self: flex-end;
+  text-align: center;
+  padding: 30px;
+}
+
+#planning .small {
+  width: 80%;
+  margin: 10px 0;
+}
+
+#planning .p-arrow {
+  display: block;
+  background-color: var(--purp);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 /* PARTNER SECTION */
@@ -285,6 +342,18 @@ footer {
 /* MEDIA QUERY */
 
 /* TABLET VIEW */
+
+@media screen and (max-width: 1080px) {
+  #jumbo .double {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #jumbo .double > div {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 768px) {
   header {
