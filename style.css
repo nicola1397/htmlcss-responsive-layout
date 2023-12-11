@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 :root {
   --gutter: 20%;
   --blue: #0084fd;
@@ -66,7 +70,7 @@ nav * {
 #planning {
   background-color: var(--purp);
   height: 100vh;
-  padding: 80px var(--gutter);
+  padding: 60px var(--gutter);
 }
 
 #planning .container {
@@ -85,4 +89,47 @@ nav * {
   border-radius: 30px;
   height: 400px;
   align-self: flex-end;
+}
+
+/* PARTNER SECTION */
+
+#partner {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.quote {
+  background-color: var(--purp);
+  border-radius: 50px;
+  color: white;
+  height: 250px;
+  width: 100%;
+  margin: 30px 0;
+  padding: 40px;
+}
+
+/* BENEFIT SECTION */
+
+#benefits {
+  background-color: var(--purp);
+}
+
+#benefits .container {
+  height: 100vh;
+}
+
+#benefits .col {
+  width: calc(100% / 3);
+  padding: 20px;
+}
+
+#benefits .row {
+  height: 100%;
+}
+
+#benefits .card {
+  background-color: white;
+  height: 100%;
+  border-radius: 20px;
+  padding: 25px;
 }
