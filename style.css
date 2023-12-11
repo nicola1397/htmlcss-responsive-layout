@@ -318,10 +318,31 @@ nav button {
 
 /* FONT OPTIONS */
 
-#b h1 {
-  color: var(--purp);
-  margin: 20px 0;
+#benefits h2 {
+  color: white;
+  margin: 80px 0;
   font-size: 4rem;
+}
+
+#benefits .number {
+  color: var(--purp);
+  margin: 80px 0;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#benefits h3 {
+  color: var(--purp);
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+#benefits p {
+  margin: 20px 0;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  font-weight: 300;
 }
 
 /* END OF FONT OPTIONS */
@@ -329,10 +350,11 @@ nav button {
 #benefits {
   background-color: var(--purp);
   text-align: center;
+  height: 100%;
 }
 
 #benefits .container {
-  height: 100vh;
+  height: 100%;
 }
 
 #benefits .col {
@@ -349,6 +371,17 @@ nav button {
   height: 100%;
   border-radius: 20px;
   padding: 25px;
+  text-align: left;
+}
+
+#benefits .more {
+  border-style: none;
+  background-color: var(--purp);
+  padding: 10px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  border-radius: 30px;
 }
 
 /* ABOUT US SECTION */
