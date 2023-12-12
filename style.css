@@ -17,6 +17,17 @@ body {
   --max-width: 1260px;
 }
 
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 20px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px -15px;
+}
+
 /* HEADER */
 
 header {
@@ -94,17 +105,6 @@ nav button {
   line-height: 1.6rem;
 }
 /* END OF FONT OPTIONS */
-
-.container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 0 20px;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 40px -15px;
-}
 
 #jumbo {
   height: 100%;
@@ -268,7 +268,6 @@ nav button {
 }
 
 #partner .quote p {
-  text-align: left;
   color: white;
   font-weight: 300;
 }
@@ -291,7 +290,7 @@ nav button {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1.3rem;
-  text-align: left;
+
   margin: 20px 0;
 }
 
@@ -330,10 +329,10 @@ nav button {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  vertical-align: middle;
 }
 
 .quotext {
+  text-align: left;
   width: calc(100% - 230px);
   align-self: center;
 }
@@ -451,12 +450,16 @@ nav button {
 #about .about-R {
   width: calc(100% / 3);
   padding: 30px 80px;
-  position: relative;
 }
 
 .about-R img {
+  display: block;
   max-width: 100%;
   clip-path: circle(50%);
+}
+
+#about .aboutpic {
+  position: relative;
 }
 
 #about button {
@@ -474,10 +477,10 @@ nav button {
   margin-right: 5px;
 }
 
-#about .overlay {
+#about #overlay {
   position: absolute;
-  top: 30px;
-  right: 90px;
+  top: 0;
+  right: 0;
   color: var(--purp);
   font-size: 4rem;
   z-index: 1;
@@ -544,6 +547,11 @@ nav button {
 /* FOOTER */
 
 /* FONT OPTIONS */
+
+footer a:visited {
+  color: var(--purp);
+}
+
 /* END OF FONT OPTIONS */
 
 footer {
@@ -575,9 +583,23 @@ footer .container {
   #jumbo .double > div {
     width: 100%;
   }
+
+  #about .container {
+    gap: 10px;
+  }
+
+  #about .about-R {
+    padding: 20px;
+  }
+
+  #about .overlay {
+    right: 0px;
+    top: 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  /* HEADER */
   header {
     padding: 20px;
   }
@@ -596,11 +618,36 @@ footer .container {
   .container {
     padding: 20px;
   }
+  /* PLANNING */
+  #planning .container {
+    display: block;
+  }
+
+  #planning .img {
+    width: 100%;
+  }
+
+  #planning img:first-of-type {
+    margin: 0;
+  }
+  /* BENEFITS */
+  #benefits h2 {
+    margin: 20px;
+  }
+  #benefits .row {
+    margin-top: 0;
+  }
   #benefits .col {
     width: calc(100% / 2);
   }
   #benefits .container {
     height: 100%;
+  }
+  /* ABOUT US */
+
+  /* GET STARTED SECTION */
+  #started .container {
+    padding: 20px 20px;
   }
 }
 
@@ -612,13 +659,13 @@ footer .container {
   }
 
   .container {
-    display: block !important;
+    display: block;
   }
-
+  /* JUMBO CARDS */
   #jumbo {
     height: 100%;
   }
-
+  /* PLANNING SECTION */
   #planning {
     height: 100%;
     padding: 0;
@@ -626,5 +673,35 @@ footer .container {
 
   #planning .img {
     width: 100%;
+  }
+  /* PARTNER SECTION */
+  #partner .quote {
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+  #partner .quote .quotext {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ABOUT US SECTION */
+
+  #about .container {
+    flex-direction: column;
+  }
+
+  #about .about-L p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  #about .about-L,
+  #about .about-R {
+    width: 100%;
+  }
+
+  #about .about-R .aboutpic {
+    width: 50%;
   }
 }
