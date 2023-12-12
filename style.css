@@ -10,21 +10,25 @@ body {
 }
 
 :root {
-  --gutter: 20%;
+  /* --gutter: 20%; */
   --blue: #0084fd;
   --azur: #b5ddff;
   --purp: #9792e4;
+  --max-width: 1260px;
 }
 
 /* HEADER */
 
 header {
-  padding: 0 var(--gutter);
+  width: 100%;
   height: 80px;
   background-color: var(--blue);
 }
 
 .navbar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   line-height: 80px;
@@ -92,7 +96,9 @@ nav button {
 /* END OF FONT OPTIONS */
 
 .container {
-  padding: 0 var(--gutter);
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 20px;
 }
 .row {
   display: flex;
@@ -303,15 +309,33 @@ nav button {
   height: 250px;
   width: 100%;
   margin: 30px 0;
-  padding: 40px 20px;
+  padding: 30px 20px;
   display: flex;
+  gap: 30px;
 }
 
 .quote .profile {
-  clip-path: circle(85px at center);
+  display: block;
+  border-radius: 50%;
+  height: 190px;
+  width: 190px;
+  line-height: 190px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
+
 .quote .profile img {
+  display: block;
+  object-fit: cover;
   width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.quotext {
+  width: calc(100% - 230px);
+  align-self: center;
 }
 
 /* BENEFIT SECTION */
@@ -351,6 +375,7 @@ nav button {
   background-color: var(--purp);
   text-align: center;
   height: 100%;
+  padding-top: 1px;
 }
 
 #benefits .container {
@@ -386,9 +411,32 @@ nav button {
 
 /* ABOUT US SECTION */
 
-#about {
-  padding: 60px 0;
+/* FONT OPTIONS */
+
+#about h2 {
+  color: var(--purp);
+  margin: 10px 0;
+  font-size: 4rem;
+  font-weight: 800;
 }
+
+#about p {
+  margin-bottom: 30px;
+  line-height: 2.3rem;
+}
+
+#about h3 {
+  color: var(--purp);
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* END OF FONT OPTIONS */
+
+/* #about {
+  padding: 60px 0;
+} */
 
 #about .container {
   display: flex;
@@ -396,15 +444,43 @@ nav button {
 }
 
 #about .about-L {
-  width: 75%;
+  width: calc(100% / 3 * 2);
+  padding: 30px;
 }
 
 #about .about-R {
-  width: 25%;
+  width: calc(100% / 3);
+  padding: 30px 80px;
+  position: relative;
 }
 
-.about-R * {
-  display: block;
+.about-R img {
+  max-width: 100%;
+  clip-path: circle(50%);
+}
+
+#about button {
+  border-style: none;
+  background-color: var(--purp);
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 30px;
+  margin: 10px 0;
+}
+
+#about button i {
+  margin-right: 5px;
+}
+
+#about .overlay {
+  position: absolute;
+  top: 30px;
+  right: 90px;
+  color: var(--purp);
+  font-size: 4rem;
+  z-index: 1;
 }
 
 /* GET STARTED SECTION */
